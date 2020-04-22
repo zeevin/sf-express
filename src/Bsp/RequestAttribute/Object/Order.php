@@ -10,6 +10,7 @@
 namespace Zeevin\Sf\Bsp\RequestAttribute\Object;
 
 
+use JMS\Serializer\Annotation as Serializer;
 use JMS\Serializer\Annotation\XmlAttribute;
 use JMS\Serializer\Annotation\SerializedName;
 
@@ -225,6 +226,20 @@ class Order
      * @SerializedName("is_unified_waybill_no")
      */
     private $isUnifiedWaybillNo;
+
+    /**
+     * @var OrderCargo
+     * @SerializedName("Cargo")
+     * @Serializer\Type("Zeevin\Sf\Bsp\RequestAttribute\Object\OrderCargo")
+     */
+    private $cargo;
+
+    /**
+     * @var OrderAddedService
+     * @SerializedName("AddedService")
+     * @Serializer\Type("Zeevin\Sf\Bsp\RequestAttribute\Object\OrderAddedService")
+     */
+    private $addedService;
 
     /**
      * @return mixed
@@ -1044,5 +1059,24 @@ class Order
         $this->isUnifiedWaybillNo = $isUnifiedWaybillNo;
 
         return $this;
+    }
+
+    /**
+     * @return OrderCargo
+     */
+    public function getCargo(): OrderCargo
+    {
+        $this->cargo instanceof OrderCargo || $this->cargo = new OrderCargo();
+
+        return $this->cargo;
+    }
+
+    /**
+     * @return OrderAddedService
+     */
+    public function getAddedService(): OrderAddedService
+    {
+        $this->addedService instanceof OrderAddedService || $this->addedService = new OrderAddedService();
+        return $this->addedService;
     }
 }

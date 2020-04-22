@@ -18,7 +18,7 @@ class Order
      * @Serializer\SerializedName("Order")
      * @Serializer\Type("Zeevin\Sf\Bsp\RequestAttribute\Object\Order")
      */
-    protected $orderRequest;
+    private $orderRequest;
 
     /**
      * @return \Zeevin\Sf\Bsp\RequestAttribute\Object\Order
