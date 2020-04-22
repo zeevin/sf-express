@@ -16,7 +16,7 @@ $app = new \Zeevin\Sf\Application($config);
 
 $request = new BspRequest\OrderSearchRequest();
 
-$orderId = 'SDMP20042115415785512';
+$orderId = 'SDMP20042215524646643';
 
 $request->setHead($app->config->get('sf')['clientcode'])->getBody()->getOrderSearchRequest()->setOrderId($orderId);
 //echo $request;exit;

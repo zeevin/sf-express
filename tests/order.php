@@ -22,7 +22,7 @@ $req = $request->setHead($app->config->get('sf')['clientcode'])
     ->getBody()->getOrderRequest();
 
 $req->setOrderid($orderId)
-    ->setMailno('SF1021110601405')
+//    ->setMailno('SF1021110601405')
     ->setJCompany($from['company'])
     ->setJContact($from['contact'])
     ->setJTel($from['tel'])
@@ -32,8 +32,8 @@ $req->setOrderid($orderId)
     ->setJCounty($from['county'])
     ->setJAddress($from['address'])
     ->setDCompany('testCorp公司')
-    ->setDContact('曹康')
-    ->setDTel('13325115789')
+    ->setDContact('王五')
+    ->setDTel('13999999999')
     ->setDAddress('山东省济南市历城区东风街道七里铺小区7-2-1');
 
 $req->getCargo()->setName("ttt");
@@ -42,5 +42,5 @@ $req->getAddedService()->setName(BspRequest\Object\OrderAddedService::COD)->setV
 //echo $request;exit;
 //var_dump($app->order);exit;
 $ret = $app->order->request($request)->getResult();
-//var_dump($ret);
-var_dump($ret->getBody()->getOrderResponse()->getRlsInfo());
+//var_dump($ret);exit;
+var_dump($ret->getBody()->getOrderResponse());
