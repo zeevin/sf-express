@@ -11,6 +11,7 @@ namespace Zeevin\Sf\Bsp\ResponseAttribute\Entity;
 
 
 use JMS\Serializer\Annotation as Serializer;
+use Zeevin\Sf\Bsp\ResponseAttribute\Object\OrderResponse;
 
 /**
  * Class Order
@@ -20,9 +21,9 @@ class Order
 {
     /**
      * @Serializer\SerializedName("OrderResponse")
-     * @Serializer\Type("Zeevin\Sf\Bsp\ResponseAttribute\Entity\OrderResponse")
+     * @Serializer\Type("Zeevin\Sf\Bsp\ResponseAttribute\Object\OrderResponse")
      */
-    protected $orderResponse;
+    private $orderResponse;
 
     /**
      * @return OrderResponse

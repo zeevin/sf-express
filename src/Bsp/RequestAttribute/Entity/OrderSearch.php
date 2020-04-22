@@ -18,14 +18,14 @@ class OrderSearch
      * @Serializer\SerializedName("OrderSearch")
      * @Serializer\Type("Zeevin\Sf\Bsp\RequestAttribute\Object\OrderSearch")
      */
-    protected $orderRequest;
+    protected $orderSearchRequest;
 
     /**
      * @return \Zeevin\Sf\Bsp\RequestAttribute\Object\OrderSearch
      */
     public function getOrderSearchRequest()
     {
-        $this->orderRequest instanceof \Zeevin\Sf\Bsp\RequestAttribute\Object\OrderSearch || $this->orderRequest = new \Zeevin\Sf\Bsp\RequestAttribute\Object\OrderSearch();
-        return $this->orderRequest;
+        $this->orderSearchRequest instanceof \Zeevin\Sf\Bsp\RequestAttribute\Object\OrderSearch || $this->orderSearchRequest = new \Zeevin\Sf\Bsp\RequestAttribute\Object\OrderSearch();
+        return $this->orderSearchRequest;
     }
 }

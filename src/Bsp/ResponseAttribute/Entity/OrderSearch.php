@@ -11,14 +11,20 @@ namespace Zeevin\Sf\Bsp\ResponseAttribute\Entity;
 
 
 use JMS\Serializer\Annotation as Serializer;
+use Zeevin\Sf\Bsp\ResponseAttribute\Object\OrderSearchResponse;
 
+/**
+ * Class OrderSearch
+ *
+ * @package Zeevin\Sf\Bsp\ResponseAttribute\Entity
+ */
 class OrderSearch
 {
     /**
      * @Serializer\SerializedName("OrderResponse")
-     * @Serializer\Type("Zeevin\Sf\Bsp\ResponseAttribute\Entity\OrderSearchResponse")
+     * @Serializer\Type("Zeevin\Sf\Bsp\ResponseAttribute\Object\OrderSearchResponse")
      */
-    protected $orderResponse;
+    private $orderResponse;
 
     /**
      * @return OrderSearchResponse

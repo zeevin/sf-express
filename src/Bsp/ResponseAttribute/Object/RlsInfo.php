@@ -7,7 +7,7 @@
  * Project: sf-express
  */
 
-namespace Zeevin\Sf\Bsp\ResponseAttribute\Entity;
+namespace Zeevin\Sf\Bsp\ResponseAttribute\Object;
 
 
 use JMS\Serializer\Annotation as Serializer;
@@ -35,7 +35,7 @@ class RlsInfo
 
     /**
      * @Serializer\SerializedName("rls_detail")
-     * @Serializer\Type("Zeevin\Sf\Bsp\ResponseAttribute\Entity\RlsDetail")
+     * @Serializer\Type("Zeevin\Sf\Bsp\ResponseAttribute\Object\RlsDetail")
      */
     private $rlsDetail;
 

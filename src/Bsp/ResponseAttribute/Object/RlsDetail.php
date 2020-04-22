@@ -7,7 +7,7 @@
  * Project: sf-express
  */
 
-namespace Zeevin\Sf\Bsp\ResponseAttribute\Entity;
+namespace Zeevin\Sf\Bsp\ResponseAttribute\Object;
 
 
 use JMS\Serializer\Annotation as Serializer;

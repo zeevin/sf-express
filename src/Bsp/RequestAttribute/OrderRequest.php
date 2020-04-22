@@ -11,26 +11,23 @@ namespace Zeevin\Sf\Bsp\RequestAttribute;
 
 
 use JMS\Serializer\Annotation as Serializer;
-use JMS\Serializer\Annotation\Type;
-use JMS\Serializer\Annotation\XmlAttribute;
-use JMS\Serializer\Annotation\XmlRoot;
 use Zeevin\Sf\Bsp\RequestAttribute\Entity\Order;
 use Zeevin\Sf\Kernel\BaseRequestAttribute;
 
 /**
  * Class OrderRequest
- * @XmlRoot("Request")
+ * @Serializer\XmlRoot("Request")
  * @package Zeevin\Sf\Bsp\RequestAttribute
  */
 class OrderRequest extends BaseRequestAttribute
 {
     /**
-     * @XmlAttribute
+     * @Serializer\XmlAttribute
      */
     protected $service = 'OrderService';
 
     /**
-     * @Type("Zeevin\Sf\Bsp\RequestAttribute\Entity\Order")
+     * @Serializer\Type("Zeevin\Sf\Bsp\RequestAttribute\Entity\Order")
      * @Serializer\SerializedName("Body")
      */
     protected $body;

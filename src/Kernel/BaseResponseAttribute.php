@@ -22,20 +22,17 @@ class BaseResponseAttribute
      * @Serializer\Type("string")
      */
     protected $reasonPhrase;
-    /**
-     * @Serializer\Type("string")
-     */
-    protected $errorCode;
-    /**
-     * @Serializer\Type("string")
-     */
-    protected $errorMessage;
 
     /**
      * @Serializer\SerializedName("Head")
      * @Serializer\Type("string")
      */
     protected $head;
+    /**
+     * @Serializer\SerializedName("ERROR")
+     * @Serializer\Type("Zeevin\Sf\Kernel\Error")
+     */
+    protected $error;
 
     /**
      * @return mixed
@@ -58,7 +55,7 @@ class BaseResponseAttribute
      */
     public function getErrorCode()
     {
-        return $this->errorCode;
+        return $this->error->getCode();
     }
 
     /**
@@ -66,7 +63,7 @@ class BaseResponseAttribute
      */
     public function getErrorMessage()
     {
-        return $this->errorMessage;
+        return $this->error->getMessage();
     }
 
     /**

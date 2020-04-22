@@ -22,4 +22,5 @@ $request->setHead($app->config->get('sf')['clientcode'])->getBody()->getOrderSea
 //echo $request;exit;
 $ret = $app->orderSearch->request($request)->getResult();
 //echo $ret;exit;
+//print_r($ret->getErrorMessage());exit;
 print_r($ret->getBody()->getOrderResponse());

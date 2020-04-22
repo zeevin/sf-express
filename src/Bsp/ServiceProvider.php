@@ -23,5 +23,8 @@ class ServiceProvider implements ServiceProviderInterface
         $app['orderSearch'] = function ($app) {
             return new OrderSearchClient($app);
         };
+        $app['orderConfirm'] = function ($app) {
+          return new OrderConfirmClient($app);
+        };
     }
 }
