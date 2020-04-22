@@ -30,7 +30,7 @@ abstract class BaseRequestAttribute
      * @Serializer\XmlElement(cdata=false)
      * @Serializer\SerializedName("Head")
      */
-    protected $head;
+    private $head;
 
     public function __toString()
     {

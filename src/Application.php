@@ -12,6 +12,7 @@ namespace Zeevin\Sf;
 
 use DusanKasan\Knapsack\Collection;
 use Zeevin\Sf\Bsp\OrderClient;
+use Zeevin\Sf\Bsp\OrderSearchClient;
 use Zeevin\Sf\Bsp\ServiceProvider;
 use Zeevin\Sf\Kernel\ServiceContainer;
 
@@ -21,6 +22,7 @@ use Zeevin\Sf\Kernel\ServiceContainer;
  * @property Collection $config;
  *
  * @property OrderClient $order
+ * @property OrderSearchClient $orderSearch
  * @package Zeevin\Sf
  */
 class Application extends ServiceContainer
