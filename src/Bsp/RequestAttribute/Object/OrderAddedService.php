@@ -14,6 +14,19 @@ use JMS\Serializer\Annotation as Serializer;
 
 class OrderAddedService
 {
+    const COD = 'COD';
+    const INSURE = 'INSURE';
+    const IN52 = 'IN52';
+    const PKFEE = 'PKFEE';
+    const IN23 = 'IN23';
+    const IN105 = 'IN105';
+    const TDELIVERY = 'TDELIVERY';
+    const IN91 = 'IN91';
+    const IN56 = 'IN56';
+    const IN41 = 'IN41';
+    const IN99 = 'IN99';
+    const XCOD = 'XCOD';
+    const NOTICE = 'NOTICE';
     /**
      * @Serializer\XmlAttribute
      * @Serializer\SerializedName("name")

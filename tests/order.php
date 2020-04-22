@@ -37,7 +37,7 @@ $req->setOrderid($orderId)
     ->setDAddress('山东省济南市历城区东风街道七里铺小区7-2-1');
 
 $req->getCargo()->setName("ttt");
-$req->getAddedService()->setName("COD")->setValue('10');
+$req->getAddedService()->setName(BspRequest\Object\OrderAddedService::COD)->setValue('10');
 
 //echo $request;exit;
 //var_dump($app->order);exit;
