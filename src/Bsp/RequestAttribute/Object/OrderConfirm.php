@@ -59,6 +59,13 @@ class OrderConfirm
     private $inProcessWaybillNo;
 
     /**
+     * @var OrderConfirmOption
+     * @Serializer\SerializedName("OrderConfirmOption")
+     * @Serializer\Type("Zeevin\Sf\Bsp\RequestAttribute\Object\OrderConfirmOption")
+     */
+    private $orderConfirmOption;
+
+    /**
      * @return mixed
      */
     public function getOrderId()
@@ -216,6 +223,16 @@ class OrderConfirm
         $this->inProcessWaybillNo = $inProcessWaybillNo;
 
         return $this;
+    }
+
+    /**
+     * @return OrderConfirmOption
+     */
+    public function getOrderConfirmOption(): OrderConfirmOption
+    {
+        $this->orderConfirmOption instanceof OrderConfirmOption || $this->orderConfirmOption = new OrderConfirmOption();
+
+        return $this->orderConfirmOption;
     }
 
 }

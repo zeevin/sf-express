@@ -22,9 +22,10 @@ $orderId = 'SDMP20042115415785512';
 
 $request->setHead($app->config->get('sf')['clientcode'])
     ->getBody()
-    ->getOrderConfirmRequest()->setOrderId($orderId)->setDealType(2);
+    ->getOrderConfirmRequest()->setOrderId($orderId)->setDealType(2)
+    ->getOrderConfirmOption()->setVolume(12)->setWeight(1);
 //var_dump($request);exit;
-//echo $request;exit;
+echo $request;exit;
 $ret = $app->orderConfirm->request($request)->getResult();
 //echo $ret;exit;
 var_dump($ret);

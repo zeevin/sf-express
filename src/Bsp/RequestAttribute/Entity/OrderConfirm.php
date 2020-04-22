@@ -11,19 +11,18 @@ namespace Zeevin\Sf\Bsp\RequestAttribute\Entity;
 
 
 use JMS\Serializer\Annotation as Serializer;
-use Zeevin\Sf\Bsp\RequestAttribute\OrderConfirmRequest;
 
 class OrderConfirm
 {
     /**
-     * @var OrderConfirmRequest
+     * @var \Zeevin\Sf\Bsp\RequestAttribute\Object\OrderConfirm
      * @Serializer\SerializedName("OrderConfirm")
      * @Serializer\Type("Zeevin\Sf\Bsp\RequestAttribute\Object\OrderConfirm")
      */
     protected $orderConfirmRequest;
 
     /**
-     * @return OrderConfirmRequest
+     * @return \Zeevin\Sf\Bsp\RequestAttribute\Object\OrderConfirm
      */
     public function getOrderConfirmRequest()
     {
