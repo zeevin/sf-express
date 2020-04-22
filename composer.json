@@ -1,0 +1,27 @@
+{
+    "name": "zeevin/sf-express",
+    "type": "library",
+    "license": "MIT",
+    "description": "顺丰丰桥 SDK",
+    "keywords": ["顺丰", "丰桥", "sf-express"],
+    "authors": [
+        {
+            "name": "CaoKang",
+            "email": "caokang@outlook.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "guzzlehttp/guzzle": "^6.5.2",
+        "pimple/pimple": "^3.3",
+        "dusank/knapsack": "^10.0",
+        "symfony/http-foundation": "~3.3||~4.0||~5.0",
+        "jms/serializer": "^1.14.1",
+      "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zeevin\\Sf\\": "src/"
+        }
+    }
+}
