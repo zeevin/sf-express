@@ -25,7 +25,7 @@ $request->setHead($app->config->get('sf')['clientcode'])
     ->getOrderConfirmRequest()->setOrderId($orderId)->setDealType(2)
     ->getOrderConfirmOption()->setVolume(12)->setWeight(1);
 //var_dump($request);exit;
-echo $request;exit;
+//echo $request;exit;
 $ret = $app->orderConfirm->request($request)->getResult();
 //echo $ret;exit;
 var_dump($ret);
