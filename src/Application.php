@@ -14,6 +14,7 @@ use DusanKasan\Knapsack\Collection;
 use Zeevin\Sf\Bsp\OrderClient;
 use Zeevin\Sf\Bsp\OrderConfirmClient;
 use Zeevin\Sf\Bsp\OrderSearchClient;
+use Zeevin\Sf\Bsp\RouteClient;
 use Zeevin\Sf\Bsp\ServiceProvider;
 use Zeevin\Sf\Kernel\ServiceContainer;
 
@@ -25,6 +26,7 @@ use Zeevin\Sf\Kernel\ServiceContainer;
  * @property OrderClient $order
  * @property OrderSearchClient $orderSearch
  * @property OrderConfirmClient $orderConfirm
+ * @property RouteClient $route
  * @package Zeevin\Sf
  */
 class Application extends ServiceContainer
