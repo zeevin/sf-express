@@ -15,6 +15,7 @@ use DusanKasan\Knapsack\Collection;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use JMS\Serializer\SerializerBuilder;
+use Zeevin\Sf\Kernel\Exception\SfException;
 
 abstract class BaseClient
 {
@@ -50,7 +51,6 @@ abstract class BaseClient
     {
         $body = trim($body);
         $method = strtoupper($this->getMethod());
-//        var_dump(['xml' => $body, 'verifyCode' => $this->sign($body)]);exit;
         try {
             $this->response = $this->getHttpClient()->request(
                 $method,
@@ -66,6 +66,11 @@ abstract class BaseClient
                 'statusCode'   => $e->getCode(),
                 'reasonPhrase' => $e->getResponse()->getReasonPhrase(),
             ];
+        } catch (\Exception $e) {
+            $this->httpErrors = [
+                'statusCode'   => $e->getCode(),
+                'reasonPhrase' => $e->getMessage(),
+            ];
         }
 
         return $this;
@@ -73,10 +78,11 @@ abstract class BaseClient
 
     public function getResult($format = 'object')
     {
-        $body = (string)$this->response->getBody();
-//        if (empty($this->httpErrors)) {
-//            return (string)$this->response->getBody();
-//        }
+        if (empty($this->httpErrors)) {
+            $body = (string)$this->response->getBody();
+        }else {
+            throw new SfException($this->httpErrors['reasonPhrase'],$this->httpErrors['statusCode']);
+        }
 
         if($format == 'object') {
             $object = 'Zeevin\Sf\\'.ucfirst($this->endPoint).'\ResponseAttribute\\'.ucfirst($this->getService()).'Response';
